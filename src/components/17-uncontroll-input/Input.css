@@ -2,7 +2,7 @@
     text-align: center;
 }
 h1{
-    font-size: 90px;
+    font-size: 70px;
     margin-top: 20px;
 }
 
@@ -31,4 +31,15 @@ button{
     width: 100%;
     border-radius: 10px;
 
+}
+form{
+    font-size: 30px;
+}
+input{
+    margin: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+label{
+    display: block;
 }

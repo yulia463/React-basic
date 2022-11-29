@@ -1,9 +1,10 @@
 import React from "react";
 import App from "../../App";
-type ButtonPropsType={
+export type ButtonPropsType={
     count?:any
     onClick:()=>void
-    text:string
+    text?:string
+
 }
 const Button =(props:ButtonPropsType)=>{
 
