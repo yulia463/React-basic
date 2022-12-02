@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import React from 'react';
 import './App.css';
 import Counter from "./components/12-13-state-via-props-and-map/Counter";
@@ -13,6 +13,12 @@ import ControllLogin from "./components/18-controlled-input/ControlledLogin";
 import ControlLogin from "./components/18-controlled-input/ControlledLogin";
 import ControlledLogin from "./components/18-controlled-input/ControlledLogin";
 import {Wrapper} from "./components/19-children-prop/Wrapper";
+import Draznilki from "./components/Draznilki/Draznilki";
+import {Posts} from "./components/21-jsonplaceholder-posts/Posts";
+import {PostsTwo} from "./components/22-useEffect-async-await/PostsTwo";
+import {Info} from "./components/23-css-modules/Info";
+import button from "./components/12-13-state-via-props-and-map/Button";
+
 
 const texts = [
     'Click me',
@@ -23,12 +29,23 @@ const texts = [
 
 function App() {
     const [count, setCount] = useState(0)
+
+    // const [todo, setTodo] = useState(null)
+    // useEffect(() => {
+    //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //         .then(response => response.json())
+    //         .then(json => setTodo(json))
+    // }, [])
+    // console.log('App rendered')
+    // console.log(todo)
+
     const incrementCount = () => {
         setCount(count + 1)
     }
     const resetCount = () => {
         setCount(0)
     }
+
     return (
         <div className="App">
             {/*// урок components - MyComponents - Other*/}
@@ -64,9 +81,23 @@ function App() {
             {/*//урок 18*/}
             {/*<ControlledLogin/>*/}
             {/*//урок 19*/}
-            <Wrapper>
-                <h2>Text inside of the Wrapper</h2>
-            </Wrapper>
+            {/*<Wrapper color={"lightblue"}>*/}
+            {/*    <h2>Text inside of the Wrapper</h2>*/}
+            {/*    <button>Click me</button>*/}
+            {/*</Wrapper>*/}
+            {/*<Wrapper color={"lightgreen"}>*/}
+            {/*    <h2>Another text</h2>*/}
+            {/*   <p> Some description</p>*/}
+            {/*    <input type={"text"} placeholder={"Enter value"}/>*/}
+            {/*</Wrapper>*/}
+            {/*<Draznilki count={1}/>*/}
+            {/*<Posts/>*/}
+            {/*<PostsTwo/>*/}
+            <Info/>
+            <div className={"info"}>
+            <h1>App component heading</h1>
+            <button className={"my-button"}>App component button</button>
+            </div>
         </div>
     );
 }

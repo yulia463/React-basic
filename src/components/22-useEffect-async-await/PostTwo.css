@@ -1,0 +1,8 @@
+.post{
+    max-width: 50%;
+    margin: 25px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(243, 234, 234);
+
+}
