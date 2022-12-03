@@ -18,6 +18,8 @@ import {Posts} from "./components/21-jsonplaceholder-posts/Posts";
 import {PostsTwo} from "./components/22-useEffect-async-await/PostsTwo";
 import {Info} from "./components/23-css-modules/Info";
 import button from "./components/12-13-state-via-props-and-map/Button";
+import {inspect} from "util";
+
 
 
 const texts = [
@@ -97,6 +99,8 @@ function App() {
             <div className={"info"}>
             <h1>App component heading</h1>
             <button className={"my-button"}>App component button</button>
+            <button className={"myOtherButton"}>App component button 2</button>
+                <h1>123</h1>
             </div>
         </div>
     );
