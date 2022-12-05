@@ -92,16 +92,17 @@ function App() {
             {/*   <p> Some description</p>*/}
             {/*    <input type={"text"} placeholder={"Enter value"}/>*/}
             {/*</Wrapper>*/}
-            {/*<Draznilki count={1}/>*/}
+            <Draznilki count={1}/>
             {/*<Posts/>*/}
             {/*<PostsTwo/>*/}
-            <Info/>
-            <div className={"info"}>
-            <h1>App component heading</h1>
-            <button className={"my-button"}>App component button</button>
-            <button className={"myOtherButton"}>App component button 2</button>
-                <h1>123</h1>
-            </div>
+            {/*<Info/>*/}
+            {/*<div className={"info"}>*/}
+            {/*<h1>App component heading</h1>*/}
+            {/*<button className={"my-button"}>App component button</button>*/}
+            {/*<button className={"myOtherButton"}>App component button 2</button>*/}
+            {/*    <h1>123</h1>*/}
+            {/*</div>*/}
+
         </div>
     );
 }

@@ -2,9 +2,11 @@ import React, {useState} from "react";
 import App from "../../App";
 import Button from "../12-13-state-via-props-and-map/Button";
 
-let randomBodyParts = ["глазки", "носик", "ебучка"];
-let randomAdjectives = ["вонючая", "унылая", "дурацкая", "картавая"];
-let randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса", "морковкинс"];
+let randomBodyParts = ["пердёж","глаз", "нос","взгляд","зуб"];
+let randomAdjectives = ["безобразный","кривой","вонючий", "унылый", "дурацкий", "картавый", "глупый","странный" ,"смешной"];
+let randomWords = ["ухо", "ноги", "язык", "волосы", "ноги", "голова"];
+let randomParts = ["коровы","хейтера","барана","мухи", "выдры", "кобылы", "мартышки", "крысы", "морковки"];
+
 
 // Выбор случайной части тела из массива randomBodyParts:
 
@@ -23,7 +25,9 @@ const Draznilki = (props: DraznilkiPropsType) => {
 
         let randomWord = randomWords[Math.floor(Math.random() * 5)];
 
-        let randomInsult = "У тебя " + randomBodyPart + " словно " + randomAdjective + " " + randomWord + "!!!";
+        let randomPart = randomParts[Math.floor(Math.random() * 4)];
+
+        let randomInsult = "У тебя " + randomBodyPart + " ещё более " + randomAdjective + " ,чем " + randomWord + " у " + randomPart;
         setDraznilka(randomInsult)
     }
     return <div>
