@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import React from 'react';
 import './App.css';
 import Counter from "./components/12-13-state-via-props-and-map/Counter";
@@ -54,7 +54,7 @@ function App() {
     }
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="App">
                 {/*// урок components - MyComponents - Other*/}
                 {/*<MyComponent/>*/}
@@ -66,22 +66,22 @@ function App() {
                 {/*<PetInfo2 animal={"elifant"} age={7} hasPet={true}/>*/}
                 {/*<PetInfo2 animal={"tiger"} age={9} hasPet={false}/>*/}
                 {/*  //урок 11-state*/}
-                <RandomNumber maxNum={1000}/>
+                {/*<RandomNumber maxNum={1000}/>*/}
                 {/*  // урок 12-13 счетчик*/}
-                <Counter count={count}/>
-                {texts.map((text, index) => {
-                    return <Button onClick={incrementCount} text={text} key={index}/>
-                })}
+                {/*<Counter count={count}/>*/}
+                {/*{texts.map((text, index) => {*/}
+                {/*    return <Button onClick={incrementCount} text={text} key={index}/>*/}
+                {/*})}*/}
                 {/*//урок14-видео149*/}
                 {/* eslint-disable-next-line react/jsx-no-undef*/}
                 {/*<Personss/>*/}
                 {/*//урок 15*/}
-                <Counter count={count}/>
-                <Button onClick={incrementCount}/>
-                <Button onClick={incrementCount}/>
-                <Button onClick={incrementCount}/>
-                <Button onClick={incrementCount}/>
-                <Reset count={count} resetCount={resetCount}/>
+                {/*<Counter count={count}/>*/}
+                {/*<Button onClick={incrementCount}/>*/}
+                {/*<Button onClick={incrementCount}/>*/}
+                {/*<Button onClick={incrementCount}/>*/}
+                {/*<Button onClick={incrementCount}/>*/}
+                {/*<Reset count={count} resetCount={resetCount}/>*/}
                 {/*//урок 16*/}
                 {/*<Card/>*/}
                 {/*// урок 17*/}
@@ -89,34 +89,33 @@ function App() {
                 {/*//урок 18*/}
                 {/*<ControlledLogin/>*/}
                 {/*//урок 19*/}
-                <Wrapper color={"lightblue"}>
-                    <h2>Text inside of the Wrapper</h2>
-                    <button>Click me</button>
-                </Wrapper>
-                <Wrapper color={"lightgreen"}>
-                    <h2>Another text</h2>
-                    <p> Some description</p>
-                    <input type={"text"} placeholder={"Enter value"}/>
-                </Wrapper>
-                <Draznilki count={1}/>
+                {/*<Wrapper color={"lightblue"}>*/}
+                {/*    <h2>Text inside of the Wrapper</h2>*/}
+                {/*    <button>Click me</button>*/}
+                {/*</Wrapper>*/}
+                {/*<Wrapper color={"lightgreen"}>*/}
+                {/*    <h2>Another text</h2>*/}
+                {/*    <p> Some description</p>*/}
+                {/*    <input type={"text"} placeholder={"Enter value"}/>*/}
+                {/*</Wrapper>*/}
                 {/*<Posts/>*/}
                 {/*<PostsTwo/>*/}
                 {/*<Info/>*/}
-                <div className={"info"}>
-                    <h1>App component heading</h1>
-                    <button className={"my-button"}>App component button</button>
-                    <button className={"myOtherButton"}>App component button 2</button>
-                    <h1>123</h1>
-                </div>
+                {/*<div className={"info"}>*/}
+                {/*    <h1>App component heading</h1>*/}
+                {/*    <button className={"my-button"}>App component button</button>*/}
+                {/*    <button className={"myOtherButton"}>App component button 2</button>*/}
+                {/*    <h1>123</h1>*/}
+                {/*</div>*/}
                 <Routes>
                     <Route path={'*'} element={<h1>Not Fount</h1>}/>
-                    <Route path={'/'} element={<h1>Home</h1>}/>
+                    <Route path={'/'} element={<Draznilki count={1}/>}/>
                     <Route path={'about'} element={<h1>About</h1>}/>
                     <Route path={'contacts'} element={<h1>Contacts</h1>}/>
                 </Routes>
             </div>
 
-        </BrowserRouter>
+        </HashRouter>
 
 
     );
