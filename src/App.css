@@ -32,3 +32,18 @@ button{
     border-radius: 10px;
 
 }
+a{
+    color: lavender;
+    font-size: 35px;
+}
+nav a{
+    margin: 15px;
+}
+nav{
+    background-color: #0b2e39;
+    padding: 5px;
+}
+.active{
+    color: lightblue;
+    text-decoration: none;
+}

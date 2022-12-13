@@ -2,30 +2,12 @@ import {useEffect, useState} from 'react';
 import {HashRouter, Route, Routes} from "react-router-dom";
 import React from 'react';
 import './App.css';
-import Counter from "./components/12-13-state-via-props-and-map/Counter";
-import Button from "./components/12-13-state-via-props-and-map/Button";
-import Person from "./components/14-map-array-of-object/Person";
-import {persons} from "./components/14-map-array-of-object/persons";
-import Personss from "./components/14-map-array-of-object/Personss";
-import Reset from "./components/15-ligical-and-operator/Reset";
-import Card from "./components/16-react-fragment/Card";
-import Login from "./components/17-uncontroll-input/Login";
-import ControllLogin from "./components/18-controlled-input/ControlledLogin";
-import ControlLogin from "./components/18-controlled-input/ControlledLogin";
-import ControlledLogin from "./components/18-controlled-input/ControlledLogin";
-import {Wrapper} from "./components/19-children-prop/Wrapper";
 import Draznilki from "./components/Draznilki/Draznilki";
-import {Posts} from "./components/21-jsonplaceholder-posts/Posts";
-import {PostsTwo} from "./components/22-useEffect-async-await/PostsTwo";
-import {Info} from "./components/23-css-modules/Info";
-import button from "./components/12-13-state-via-props-and-map/Button";
-import {inspect} from "util";
-import MyComponent from "./components/MyComponent";
-import {PetInfo2} from "./components/10-conditional-rendering/PetInfo2";
-import {PetInfo} from "./components/09-props/PetInfo";
-import {RandomNumber} from "./components/11-state/RandomNumber";
-import Other from "./components/Other";
-
+import NotFound from "./components/24-react-router/NotFound";
+import About from "./components/24-react-router/About";
+import Contacts from "./components/24-react-router/Contacts";
+import Home from "./components/24-react-router/Home";
+import {MainLayout} from "./components/24-react-router/MainLayout";
 
 const texts = [
     'Click me',
@@ -108,10 +90,14 @@ function App() {
                 {/*    <h1>123</h1>*/}
                 {/*</div>*/}
                 <Routes>
-                    <Route path={'*'} element={<h1>Not Fount</h1>}/>
-                    <Route path={'/'} element={<Draznilki count={1}/>}/>
-                    <Route path={'about'} element={<h1>About</h1>}/>
-                    <Route path={'contacts'} element={<h1>Contacts</h1>}/>
+                    <Route path={'/'} element={<MainLayout/>}>
+                        <Route index={true} element={<Home/>}/>
+                        <Route path={'*'} element={<NotFound/>}/>
+                        <Route path={'draznilki'} element={<Draznilki count={1}/>}/>
+                        <Route path={'about'} element={<About/>}/>
+                        <Route path={'contacts'} element={<Contacts/>}/>
+                    </Route>
+
                 </Routes>
             </div>
 
