@@ -8,6 +8,10 @@ import About from "./components/24-react-router/About";
 import Contacts from "./components/24-react-router/Contacts";
 import Home from "./components/24-react-router/Home";
 import {MainLayout} from "./components/24-react-router/MainLayout";
+import {Courses} from "./components/24-react-router/Courses";
+import {coursesArray} from "./components/24-react-router/coursesArray";
+import {SingleCourse} from "./components/24-react-router/SingleCourse";
+
 
 const texts = [
     'Click me',
@@ -96,6 +100,8 @@ function App() {
                         <Route path={'draznilki'} element={<Draznilki count={1}/>}/>
                         <Route path={'about'} element={<About/>}/>
                         <Route path={'contacts'} element={<Contacts/>}/>
+                        <Route path={'courses'} element={<Courses courses={coursesArray}/>}/>
+                        <Route path={'courses/:courseSlug'} element={<SingleCourse courses={coursesArray}/>}/>
                     </Route>
 
                 </Routes>
